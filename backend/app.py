@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 
 from flask import Flask
+from flask_cors import CORS
 from config import Config
 from models import db
-
 
 def create_app():
     """"Function intializes app instance
@@ -12,6 +12,7 @@ def create_app():
     """
 
     app = Flask(__name__)
+    CORS(app)
     app.config.from_object(Config)
 
     # Initialize MongoEngine
