@@ -8,7 +8,7 @@ const Menu = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="relative">
+    <div className="">
       <Image
         src="/menu.png"
         alt="Menu"
@@ -18,17 +18,17 @@ const Menu = () => {
         onClick={() => setOpen((prev) => !prev)}
       />
       {open && (
-        <div className="absolute bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] flex flex-col items-center justify-center gap-8 text-xl z-10">
-          <Link href="/">Home</Link>
-          <Link href="/">Shop</Link>
-          <Link href="/">About</Link>
-          <Link href="/">Contact</Link>
-          <Link href="/">Logout</Link>
-          <Link href="/">Cart (0)</Link>
+        <div className="absolute flex flex-col bg-black text-white left-0 top-20 w-full h-[calc(100vh-80px)] p-4">
+          <Link href="/" className="">Home</Link>
+          <Link href="/shop" className="">Shop</Link>
+          <Link href="/about" className="">About</Link>
+          <Link href="/contact" className="">Contact</Link>
+          <Link href="/logout" className="">Logout</Link>
+          <Link href="/cart" className="">Cart (0)</Link>
         </div>
       )}
     </div>
   );
 };
 
-export default Menu
+export default Menu;
